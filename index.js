@@ -45,9 +45,10 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-    /*your code here*/
-}    
+function copy(array){
+    let newArray = array
+    return newArray
+}
 
 
 
@@ -64,9 +65,18 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-   /*your code here*/
+
+function is31Flavors(myarray){
+    if (myarray.length === 31) {
+        return true;
+    }else {
+        return false;
+
+    }
+    
 }
+   
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -80,10 +90,14 @@ Use the addFlavor function below to do the following:
     For example: addFlavor("Rainbow Sherbert", originalFlavors) should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
-
-function addFlavor(/*your code here*/){
-   /*your code here*/
+function addFlavor(array,Flavor) {
+    array.splice(0,0, Flavor);
+         return array
 }
+//  console.log(originalFlavors)
+
+
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -97,9 +111,15 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
-   /*your code here*/
+function removeLastFlavor(myarray){
+    myarray.pop();
+    return myarray
+
 }
+
+// console.log(addFlavor("Rainbow Sherber ", originalFlavors))
+
+
 
 
 
@@ -114,9 +134,12 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
-}
+function getFlavorByIndex(array, number){
+       
+        return array[number];
+
+    }
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -134,9 +157,16 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
-}
+function removeFlavorByName(array, string)  {
+        for(let i = 0; i < array.length; i++) {
+            if(array[i]=== string) {
+                array.splice(i,1);
+            }
+        }
+        return array;
+    }
+
+
 
 
 
